@@ -1,0 +1,19 @@
+<div class="hover-anchor" [ngClass]="wordData.root" [satPopoverAnchor]="p" (mouseenter)="p.open()">
+  {{wordData.word}}
+</div>
+<sat-popover #p horizontalAlign="after" hasBackdrop>
+  <div class="tooltip-wrapper">
+    <span *ngIf="wordData.transliteral" class="transliteral" [ngClass]="wordData.root">{{wordData.transliteral}}: </span>
+    {{wordData.definition}}<br/>
+    <div *ngFor="let part of wordData.parts">
+      <a>
+        <span *ngIf="part.transliteral" class="transliteral" [ngClass]="part.root">{{part.transliteral}}, </span>
+        <span [ngClass]="part.root">{{part.part}}:</span> 
+        {{part.definition}}
+      </a>
+    </div>
+    <!-- <a><span>astro</span>, astro: stars</a><br/>
+    <a><span>logos</span>, logos: words</a> -->
+  </div>
+</sat-popover>
+

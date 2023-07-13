@@ -1,0 +1,30 @@
+<nav>
+  <h1>The Curriculum Novum</h1>
+  <button>Home</button>
+  <button>Login</button>
+</nav>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item href="..." routerLink="/intro" routerLinkActive="active">Intro</a>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            UNIT I
+          </mat-panel-title>
+          <mat-panel-description>
+            The Birth of Civilization
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+      <a mat-list-item href="..." routerLink="/neolithic" routerLinkActive="active">The Neolithic Revolution</a>
+      <a class="link" mat-list-item href="..." routerLink="/mesopotamia" routerLinkActive="active">Mesopotamia</a>
+    </mat-expansion-panel>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
